@@ -36,11 +36,11 @@ function thumbUpComment(id) {
     }
 }
 
-function thumbdownComment(id) {
+function thumbDownComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
         id
     }
 }
 
-export {addComment, removeComment, editComment, thumbUpComment, thumbdownComment};
+export {addComment, removeComment, editComment, thumbUpComment, thumbDownComment};

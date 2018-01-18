@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers.js';
-import {addComment, removeComment, editComment, thumbUpComment, thumbdownComment} from './actions.js';
+import {addComment} from './actions.js';
 
 const store = createStore(reducer);
 
