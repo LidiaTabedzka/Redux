@@ -5,6 +5,7 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+export const INPUT_CHANGE = 'INPUT_CHANGE';
 
 function addComment(text) {
     return {
@@ -43,4 +44,11 @@ function thumbDownComment(id) {
     }
 }
 
-export {addComment, removeComment, editComment, thumbUpComment, thumbDownComment};
+function inputChange(text) {
+    return {
+        type: INPUT_CHANGE,
+        text
+    }
+}
+
+export {addComment, removeComment, editComment, thumbUpComment, thumbDownComment, inputChange};
