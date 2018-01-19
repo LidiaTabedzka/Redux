@@ -6,12 +6,16 @@ export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 export const INPUT_CHANGE = 'INPUT_CHANGE';
+export const EDIT_BUTTON_CLICKED = 'EDIT_BUTTON_CLICKED';
+export const COMMENT_INPUT_CHANGE = 'COMMENT_INPUT_CHANGE';
 
 function addComment(text) {
     return {
         type: ADD_COMMENT,
         text,
-        id: uuid.v4()
+        id: uuid.v4(),
+        edit: false,
+        inputText: text
     }
 }
 
@@ -26,6 +30,14 @@ function editComment(text, id) {
     return {
         type: EDIT_COMMENT,
         text,
+        id
+    }
+}
+
+function editButtonClicked(id, value) {
+    return {
+        type: EDIT_BUTTON_CLICKED,
+        edit: value,
         id
     }
 }
@@ -51,4 +63,12 @@ function inputChange(text) {
     }
 }
 
-export {addComment, removeComment, editComment, thumbUpComment, thumbDownComment, inputChange};
+function commentInputChange(text, id) {
+    return {
+        type: COMMENT_INPUT_CHANGE,
+        inputText: text,
+        id
+    }
+}
+
+export {addComment, removeComment, editComment, thumbUpComment, thumbDownComment, inputChange, editButtonClicked, commentInputChange};

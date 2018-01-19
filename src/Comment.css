@@ -1,7 +1,7 @@
 li {
     margin: 20px;
 }
-li div {
+.comment-div {
     display: inline-block;
     position: relative;
     background-color: lightgray;
@@ -10,6 +10,10 @@ li div {
 }
 p {
     font-style: italic;
+}
+input {
+    margin-bottom: 10px;
+    padding: 5px;
 }
 span {
     font-weight: bold;
