@@ -4,7 +4,7 @@ import {addComment, editComment, inputChange} from './actions';
 
 const mapStateToProps = state => ({
   comments: state.comments,
-  inputText: state.inputTextChange
+  inputText: state.inputTextChange.text
 });
 
 const mapDispatchToProps = dispatch => ({

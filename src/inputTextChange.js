@@ -1,9 +1,9 @@
 import {INPUT_CHANGE} from './actions.js';
 
-function inputTextChange(state = "", action) {
+function inputTextChange(state = {}, action) {
     switch(action.type) {
         case INPUT_CHANGE:
-            return action.text;
+            return Object.assign({}, state, {text: action.text});
         default:
             return state;
     }
